@@ -40,6 +40,14 @@
         <div class="box" @mouseleave="handleEvent">mouseleave</div>
         <div class="box" @dblclick="handleEvent">double click</div>
         <div class="box" @mousemove="handleMousemove">position - {{ x }} {{ y }}</div>
+    
+        <!-- Loop vFor-->
+        <ul>
+                <li v-for="book in booksArray">
+                  <h3>  {{ book.title }} </h3>
+                  <p> {{ book.author }} </p>
+                </li>
+        </ul>
     </div>
 
 <script src="app.js"></script>

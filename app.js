@@ -7,6 +7,23 @@ const app = Vue.createApp({
            age : 45,
            x : 0,
             y : 0,
+            booksArray : [
+                {
+                    title : 'The Final Empire II',
+                    author : 'George R. R. Martin',
+                },
+                {
+                    title : 'The Long Walk',
+                    author : 'George R. R. Martin',
+                    
+                },
+                {
+                    title : 'The Long Walk II',
+                    author : 'George R. R. Martin',
+                    
+                },
+
+            ],
         }
     },
     methods: {
