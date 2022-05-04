@@ -15,6 +15,9 @@
             margin: 20px;
             display: inline-block;
         }
+        li.fav{
+            background-color: greenyellow;
+        }
     </style>
 </head>
 
@@ -22,6 +25,7 @@
     <h1>Hello Vue :)</h1>
 
     <div id="app">
+        
         <!-- Click events -->
         <div v-if="showBooks">
             <p>{{title}} - {{author}} - {{age}}</p>
@@ -45,7 +49,7 @@
 
         <!-- Loop vFor-->
         <ul>
-            <li v-for="book in booksArray">
+            <li v-for="book in booksArray" :class="{ fav: book.isFav }">
                 <img :src="book.img" :alt="book.title">
                 <h3> {{ book.title }} </h3>
                 <p> {{ book.author }} </p>

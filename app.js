@@ -13,17 +13,19 @@ const app = Vue.createApp({
                     title : 'The Final Empire II',
                     author : 'George R. R. Martin',
                     img:'assets/1.jpg',
+                    isFav:true
                 },
                 {
                     title : 'The Long Walk',
                     author : 'George R. R. Martin',
                     img:'assets/2.jpg',
-                    
+                    isFav:false
                 },
                 {
                     title : 'The Long Walk II',
                     author : 'George R. R. Martin',
                     img:'assets/2.jpg',
+                    isFav:true
                 },
 
             ],
@@ -43,7 +45,10 @@ const app = Vue.createApp({
     handleMousemove(e){
         this.x = e.offsetX;
         this.y = e.offsetY;
-    }
+    },
+    // filteredBooks(){
+    //     return this.booksArray.filter((book) => book.isFav);
+    // },
 
 }
 }
