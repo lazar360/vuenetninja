@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,9 +17,10 @@
         }
     </style>
 </head>
+
 <body>
     <h1>Hello Vue :)</h1>
-    
+
     <div id="app">
         <!-- Click events -->
         <div v-if="showBooks">
@@ -29,8 +31,8 @@
         </div>
 
         <button @click="toggleShowBooks">
-            <span v-if="showBooks" >Hide books</span>
-            <span v-if="!showBooks" >Show books</span> 
+            <span v-if="showBooks">Hide books</span>
+            <span v-if="!showBooks">Show books</span>
             <span v-else>Show books</span>
         </button>
         <div v-show="showBooks">currently showing books</div>
@@ -40,16 +42,22 @@
         <div class="box" @mouseleave="handleEvent">mouseleave</div>
         <div class="box" @dblclick="handleEvent">double click</div>
         <div class="box" @mousemove="handleMousemove">position - {{ x }} {{ y }}</div>
-    
+
         <!-- Loop vFor-->
         <ul>
-                <li v-for="book in booksArray">
-                  <h3>  {{ book.title }} </h3>
-                  <p> {{ book.author }} </p>
-                </li>
+            <li v-for="book in booksArray">
+                <img :src="book.img" :alt="book.title">
+                <h3> {{ book.title }} </h3>
+                <p> {{ book.author }} </p>
+            </li>
         </ul>
+    
+     <!-- attribute binding -->
+     <!-- <a v-bind:href="url">My super website</a> -->
+        <a :href="url">My super website</a>
     </div>
 
-<script src="app.js"></script>
+    <script src="app.js"></script>
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 const app = Vue.createApp({
     data() {
         return {
+            url:"https://devnantes.fr",
             showBooks: true,
            title : 'The Final Empire',
            author : 'George R. R. Martin',
@@ -11,16 +12,18 @@ const app = Vue.createApp({
                 {
                     title : 'The Final Empire II',
                     author : 'George R. R. Martin',
+                    img:'assets/1.jpg',
                 },
                 {
                     title : 'The Long Walk',
                     author : 'George R. R. Martin',
+                    img:'assets/2.jpg',
                     
                 },
                 {
                     title : 'The Long Walk II',
                     author : 'George R. R. Martin',
-                    
+                    img:'assets/2.jpg',
                 },
 
             ],
